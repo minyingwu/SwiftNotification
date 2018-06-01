@@ -9,21 +9,20 @@
 import Foundation
 import UserNotifications
 
+@available(iOS 10.0, *)
 typealias ActionContext = (actionTitle: String, actionOptions: UNNotificationActionOptions)
 
+@available(iOS 10.0, *)
 public class NotificationIdentity {
-    var mId: Int32!
-    var mRequestId: Int32!
+    var mRequestId: String!
     var mCategoryId: String?
     
     var mCategoryActions: [ActionContext] = []
     
-    public init(_ mId: Int32) {
-        self.mId = mId
-    }
+    public init() {}
     
     // Notification number
-    public func setRequestId(_ requestId: Int32) -> NotificationIdentity {
+    public func setRequestId(_ requestId: String) -> NotificationIdentity {
         self.mRequestId = requestId
         return self
     }
@@ -39,11 +38,11 @@ public class NotificationIdentity {
         return self
     }
     
-    internal func get() -> (numId: Int32, requestId: Int32, categoryId: String, categoryActions: [ActionContext]){
+    internal func get() -> (requestId: String, categoryId: String, categoryActions: [ActionContext]){
         guard mCategoryId != nil else {
-            return (mId, mRequestId, "", [])
+            return (mRequestId, "", [])
         }
-        return (mId, mRequestId, mCategoryId!, mCategoryActions)
+        return (mRequestId, mCategoryId!, mCategoryActions)
     }
 }
 

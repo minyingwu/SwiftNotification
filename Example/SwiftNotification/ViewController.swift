@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftNotification
 
 class ViewController: UIViewController {
 
@@ -20,5 +21,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func showNotification(_ sender: Any) {
+        let testData = [DefaultKey.NotificationId: 100,
+                    DefaultKey.Category: "Notification_Test_Category",
+                    DefaultKey.Title: "testTitle",
+                    DefaultKey.Content: "testContent",
+                    DefaultKey.TimeStamp: 999] as [String : Any]
+        MyAppNotificationHelper.shared.buildNotification(data: testData)
+    }
 }
 

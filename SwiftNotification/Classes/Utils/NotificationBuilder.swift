@@ -9,6 +9,7 @@
 import Foundation
 import UserNotifications
 
+@available(iOS 10.0, *)
 class NotificationBuilder {
     private let userDefaults = UserDefaults.standard
     private var notificationContent: UNMutableNotificationContent?

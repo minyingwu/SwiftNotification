@@ -7,6 +7,7 @@
 //
 import UserNotifications
 
+@available(iOS 10.0, *)
 public protocol NotificationBuilderDelegate: class {
     var notificationInfo: NotificationInfo {get}
     
@@ -17,6 +18,7 @@ public protocol NotificationBuilderDelegate: class {
     func getNotificationIdentityDic() -> Dictionary<String, NotificationIdentity>
 }
 
+@available(iOS 10.0, *)
 public extension NotificationBuilderDelegate {
     var notificationInfo: NotificationInfo {
         return getNotificationInfo()

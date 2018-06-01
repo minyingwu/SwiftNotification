@@ -9,6 +9,7 @@
 import Foundation
 import UserNotifications
 
+@available(iOS 10.0, *)
 public class NotificationBuilderHelper {
     public weak var delegate: NotificationBuilderDelegate!
     
@@ -20,7 +21,7 @@ public class NotificationBuilderHelper {
     public init(withMessage data: [AnyHashable: Any], notificationId: Int32) {
         self.msgData = data
         msgData.updateValue(
-            notificationId, forKey: DefaultKey.NotificationId.rawValue)
+            notificationId, forKey: DefaultKey.NotificationId)
     }
     
     public func createNotification(with type: SoundType, alter actionIndex: Int? = nil) -> NotificationBuilderHelper? {
@@ -34,7 +35,7 @@ public class NotificationBuilderHelper {
             .setUserInfo(userInfo: msgData)
             .setCategoryIdentifer(categoryIdentifier: (self.delegate.notificationInfo.getCategory()))
         mRequest = UNNotificationRequest(
-            identifier: "\(self.delegate.notificationInfo.getNotificationId())",
+            identifier: mIdentity.requestId,
             content: mBuilder.getContent(),
             trigger: mBuilder.getTimeTrigger(interval: 1))
         

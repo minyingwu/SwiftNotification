@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import UserNotifications
+import SwiftNotification
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if #available(iOS 10.0, *) {
+            let center = UNUserNotificationCenter.current()
+            center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            } 
+            NotificationSettings.center = center
+            NotificationSettings.delegate = MyAppNotificationDelegate()
+        }
         return true
     }
 

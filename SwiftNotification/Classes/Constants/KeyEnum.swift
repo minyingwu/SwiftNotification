@@ -6,13 +6,13 @@
 //  Copyright © 2018 Victor. All rights reserved.
 //
 
-public enum DefaultKey: String {
-    case NotificationId = "notificationid"
-    case Category = "category"
-    case Title = "title"
-    case Content = "content"
-    case TimeStamp = "timestamp"
-    case IsRead = "isRead"
+public struct DefaultKey {
+    public static let NotificationId = "notificationid"
+    public static let Category = "category"
+    public static let Title = "title"
+    public static let Content = "content"
+    public static let TimeStamp = "timestamp"
+    public static let IsRead = "isRead"
 }
 
 public enum ActionId: String {
