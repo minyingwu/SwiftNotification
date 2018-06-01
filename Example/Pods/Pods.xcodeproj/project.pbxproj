@@ -158,6 +158,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2E9FD6DC20C0EAF900983A6D /* SwiftNotification */ = {
+			isa = PBXGroup;
+			children = (
+				2E9FD6C920C0E80200983A6D /* Classes */,
+			);
+			name = SwiftNotification;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		444A6EC8FD078FC2E345D75B81F81414 /* Pods-SwiftNotification_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,7 +206,7 @@
 		7C1EA4A9267F2C5296B2488B2B495287 /* SwiftNotification */ = {
 			isa = PBXGroup;
 			children = (
-				2E9FD6C920C0E80200983A6D /* Classes */,
+				2E9FD6DC20C0EAF900983A6D /* SwiftNotification */,
 				B5FCFD263C308B799DE7994668A72F60 /* Support Files */,
 			);
 			name = SwiftNotification;
