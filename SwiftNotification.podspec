@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftNotification'
   s.version          = '1.0.0'
-  s.summary          = 'A simple SDK to create different notifications after iOS     10.0'
+  s.summary          = 'A simple SDK to create different notifications after iOS 10.0'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -27,7 +27,9 @@ TODO: Add long description of the pod here.
   s.author           = { 'minyingwu' => 'minyingwu123@gmail.com' }
   s.source           = { :git => 'https://github.com/minyingwu/SwiftNotification.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  #
+  #
+  s.platform = :ios, "10.0"
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'SwiftNotification/Classes/**/*'
