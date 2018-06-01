@@ -1,0 +1,16 @@
+PODS:
+  - SwiftNotification (0.1.0)
+
+DEPENDENCIES:
+  - SwiftNotification (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftNotification:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SwiftNotification: e03c482687f23785dabfc25bb048ec890856e492
+
+PODFILE CHECKSUM: f4d2cd986211d5ad177f69dc3aa040811ac856c5
+
+COCOAPODS: 1.3.1
