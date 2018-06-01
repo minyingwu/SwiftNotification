@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E9FD6D520C0E80200983A6D /* KeyEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD6CB20C0E80200983A6D /* KeyEnum.swift */; };
-		2E9FD6D620C0E80200983A6D /* NotificationBuilderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD6CD20C0E80200983A6D /* NotificationBuilderDelegate.swift */; };
-		2E9FD6D720C0E80200983A6D /* NotificationIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD6CF20C0E80200983A6D /* NotificationIdentity.swift */; };
-		2E9FD6D820C0E80200983A6D /* NotificationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD6D020C0E80200983A6D /* NotificationBuilder.swift */; };
-		2E9FD6D920C0E80200983A6D /* NotificationBuilderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD6D120C0E80200983A6D /* NotificationBuilderHelper.swift */; };
-		2E9FD6DA20C0E80200983A6D /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD6D220C0E80200983A6D /* NotificationSettings.swift */; };
-		2E9FD6DB20C0E80200983A6D /* NotificationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD6D420C0E80200983A6D /* NotificationInfo.swift */; };
+		2E9FD6ED20C0EEFB00983A6D /* KeyEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD6E020C0EEFB00983A6D /* KeyEnum.swift */; };
+		2E9FD6EE20C0EEFB00983A6D /* NotificationBuilderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD6E320C0EEFB00983A6D /* NotificationBuilderDelegate.swift */; };
+		2E9FD6EF20C0EEFB00983A6D /* NotificationIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD6E520C0EEFB00983A6D /* NotificationIdentity.swift */; };
+		2E9FD6F020C0EEFB00983A6D /* NotificationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD6E620C0EEFB00983A6D /* NotificationBuilder.swift */; };
+		2E9FD6F120C0EEFB00983A6D /* NotificationBuilderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD6E720C0EEFB00983A6D /* NotificationBuilderHelper.swift */; };
+		2E9FD6F220C0EEFB00983A6D /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD6E820C0EEFB00983A6D /* NotificationSettings.swift */; };
+		2E9FD6F320C0EEFB00983A6D /* NotificationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD6EA20C0EEFB00983A6D /* NotificationInfo.swift */; };
 		31FCDC2B33DC0872853CB9716C7C480C /* Pods-SwiftNotification_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0349C3615416A3C936C304C76A32693F /* Pods-SwiftNotification_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D02D82D616FDF3697D55270FB43FB7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		6EEB9413CED2B410E4C9FDF4ABC6AFDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -40,13 +40,13 @@
 		113A4BB19106C4062F221266E61FBC97 /* Pods-SwiftNotification_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftNotification_Example.release.xcconfig"; sourceTree = "<group>"; };
 		20BDA210EE6CFE2AD28F29C22AC13CA3 /* Pods-SwiftNotification_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftNotification_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		22CD936DC0F6FCDD20CB3A4FF8A5DAB6 /* SwiftNotification.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftNotification.modulemap; sourceTree = "<group>"; };
-		2E9FD6CB20C0E80200983A6D /* KeyEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyEnum.swift; sourceTree = "<group>"; };
-		2E9FD6CD20C0E80200983A6D /* NotificationBuilderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationBuilderDelegate.swift; sourceTree = "<group>"; };
-		2E9FD6CF20C0E80200983A6D /* NotificationIdentity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationIdentity.swift; sourceTree = "<group>"; };
-		2E9FD6D020C0E80200983A6D /* NotificationBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationBuilder.swift; sourceTree = "<group>"; };
-		2E9FD6D120C0E80200983A6D /* NotificationBuilderHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationBuilderHelper.swift; sourceTree = "<group>"; };
-		2E9FD6D220C0E80200983A6D /* NotificationSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSettings.swift; sourceTree = "<group>"; };
-		2E9FD6D420C0E80200983A6D /* NotificationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationInfo.swift; sourceTree = "<group>"; };
+		2E9FD6E020C0EEFB00983A6D /* KeyEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyEnum.swift; sourceTree = "<group>"; };
+		2E9FD6E320C0EEFB00983A6D /* NotificationBuilderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationBuilderDelegate.swift; sourceTree = "<group>"; };
+		2E9FD6E520C0EEFB00983A6D /* NotificationIdentity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationIdentity.swift; sourceTree = "<group>"; };
+		2E9FD6E620C0EEFB00983A6D /* NotificationBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationBuilder.swift; sourceTree = "<group>"; };
+		2E9FD6E720C0EEFB00983A6D /* NotificationBuilderHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationBuilderHelper.swift; sourceTree = "<group>"; };
+		2E9FD6E820C0EEFB00983A6D /* NotificationSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSettings.swift; sourceTree = "<group>"; };
+		2E9FD6EA20C0EEFB00983A6D /* NotificationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationInfo.swift; sourceTree = "<group>"; };
 		30FCC7C648193146C8AB5FF932D6C45E /* Pods-SwiftNotification_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftNotification_Example-umbrella.h"; sourceTree = "<group>"; };
 		3354038CF6E42749C455B478704E3175 /* SwiftNotification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftNotification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D7589C443A0C346942D53CD01C0EFC /* Pods-SwiftNotification_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftNotification_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -112,59 +112,58 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		2E9FD6C920C0E80200983A6D /* Classes */ = {
+		2E9FD6DD20C0EEFB00983A6D /* SwiftNotification */ = {
 			isa = PBXGroup;
 			children = (
-				2E9FD6CA20C0E80200983A6D /* Constants */,
-				2E9FD6CC20C0E80200983A6D /* Delegate */,
-				2E9FD6D320C0E80200983A6D /* Model */,
-				2E9FD6CE20C0E80200983A6D /* Utils */,
-				2E9FD6D120C0E80200983A6D /* NotificationBuilderHelper.swift */,
-				2E9FD6D220C0E80200983A6D /* NotificationSettings.swift */,
+				2E9FD6DE20C0EEFB00983A6D /* Classes */,
+			);
+			path = SwiftNotification;
+			sourceTree = "<group>";
+		};
+		2E9FD6DE20C0EEFB00983A6D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2E9FD6DF20C0EEFB00983A6D /* Constants */,
+				2E9FD6E220C0EEFB00983A6D /* Delegate */,
+				2E9FD6E920C0EEFB00983A6D /* Model */,
+				2E9FD6E420C0EEFB00983A6D /* Utils */,
+				2E9FD6E720C0EEFB00983A6D /* NotificationBuilderHelper.swift */,
+				2E9FD6E820C0EEFB00983A6D /* NotificationSettings.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		2E9FD6CA20C0E80200983A6D /* Constants */ = {
+		2E9FD6DF20C0EEFB00983A6D /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				2E9FD6CB20C0E80200983A6D /* KeyEnum.swift */,
+				2E9FD6E020C0EEFB00983A6D /* KeyEnum.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		2E9FD6CC20C0E80200983A6D /* Delegate */ = {
+		2E9FD6E220C0EEFB00983A6D /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				2E9FD6CD20C0E80200983A6D /* NotificationBuilderDelegate.swift */,
+				2E9FD6E320C0EEFB00983A6D /* NotificationBuilderDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
 		};
-		2E9FD6CE20C0E80200983A6D /* Utils */ = {
+		2E9FD6E420C0EEFB00983A6D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				2E9FD6CF20C0E80200983A6D /* NotificationIdentity.swift */,
-				2E9FD6D020C0E80200983A6D /* NotificationBuilder.swift */,
+				2E9FD6E520C0EEFB00983A6D /* NotificationIdentity.swift */,
+				2E9FD6E620C0EEFB00983A6D /* NotificationBuilder.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		2E9FD6D320C0E80200983A6D /* Model */ = {
+		2E9FD6E920C0EEFB00983A6D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2E9FD6D420C0E80200983A6D /* NotificationInfo.swift */,
+				2E9FD6EA20C0EEFB00983A6D /* NotificationInfo.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		2E9FD6DC20C0EAF900983A6D /* SwiftNotification */ = {
-			isa = PBXGroup;
-			children = (
-				2E9FD6C920C0E80200983A6D /* Classes */,
-			);
-			name = SwiftNotification;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		444A6EC8FD078FC2E345D75B81F81414 /* Pods-SwiftNotification_Example */ = {
@@ -206,7 +205,7 @@
 		7C1EA4A9267F2C5296B2488B2B495287 /* SwiftNotification */ = {
 			isa = PBXGroup;
 			children = (
-				2E9FD6DC20C0EAF900983A6D /* SwiftNotification */,
+				2E9FD6DD20C0EEFB00983A6D /* SwiftNotification */,
 				B5FCFD263C308B799DE7994668A72F60 /* Support Files */,
 			);
 			name = SwiftNotification;
@@ -388,13 +387,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E9FD6D620C0E80200983A6D /* NotificationBuilderDelegate.swift in Sources */,
-				2E9FD6D520C0E80200983A6D /* KeyEnum.swift in Sources */,
-				2E9FD6DA20C0E80200983A6D /* NotificationSettings.swift in Sources */,
-				2E9FD6D920C0E80200983A6D /* NotificationBuilderHelper.swift in Sources */,
-				2E9FD6DB20C0E80200983A6D /* NotificationInfo.swift in Sources */,
-				2E9FD6D720C0E80200983A6D /* NotificationIdentity.swift in Sources */,
-				2E9FD6D820C0E80200983A6D /* NotificationBuilder.swift in Sources */,
 				F5250287CDD46E770ABBF9AFA158CB7E /* Pods-SwiftNotification_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +395,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E9FD6EE20C0EEFB00983A6D /* NotificationBuilderDelegate.swift in Sources */,
+				2E9FD6ED20C0EEFB00983A6D /* KeyEnum.swift in Sources */,
+				2E9FD6F220C0EEFB00983A6D /* NotificationSettings.swift in Sources */,
+				2E9FD6F120C0EEFB00983A6D /* NotificationBuilderHelper.swift in Sources */,
+				2E9FD6F320C0EEFB00983A6D /* NotificationInfo.swift in Sources */,
+				2E9FD6EF20C0EEFB00983A6D /* NotificationIdentity.swift in Sources */,
+				2E9FD6F020C0EEFB00983A6D /* NotificationBuilder.swift in Sources */,
 				D1712AAA109939EB9E74636D2CB83E26 /* SwiftNotification-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
