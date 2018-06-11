@@ -19,18 +19,25 @@ class MyAppNotificationHelper {
         if let info = info {
             let buildHelper = NotificationBuilderHelper.init(withMessage: data, notificationId: info.getNotificationId())
             buildHelper.delegate = self
+            
+            // MARK: You can do something here, like distinguishing different notifications and storing them separately in the database by notificationInfo
+            
+            // Example: saveNotificationDB(notificationInfo)
+            
+            // Create local notification and show it
             buildHelper.createNotification(with: .defaultSound)?.show()
         }else {
             print("Never initialize model of notificationInfo")
         }
     }
     
+    // Example for setting notification data model
     func setNotificationInfo(_ data: [AnyHashable: Any]) {
-        let _notificationId = data[DefaultKey.NotificationId] as? Int32 ?? 0
-        let _category = data[DefaultKey.Category] as? String ?? ""
-        let _title = data[DefaultKey.Title] as? String ?? ""
-        let _content = data[DefaultKey.Content] as? String ?? ""
-        let _timeStamp = data[DefaultKey.TimeStamp] as? Double ?? 0.00
+        let _notificationId = data[DefaultKey.NotificationId] as? Int32
+        let _category = data[DefaultKey.Category] as? String
+        let _title = data[DefaultKey.Title] as? String
+        let _content = data[DefaultKey.Content] as? String
+        let _timeStamp = data[DefaultKey.TimeStamp] as? Double
         
         info = MyAppNotificationInfo.init(notificationId: _notificationId, category: _category, title: _title, content: _content, timestamp: _timeStamp, isRead: false)
         info?.setcustomUid("My Uid")

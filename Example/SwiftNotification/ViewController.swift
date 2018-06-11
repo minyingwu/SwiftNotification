@@ -13,20 +13,28 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        NotificationCenter.default.addObserver(self, selector: #selector(receiveBanner100(notification:)), name: Notification.Name("ReceiveBanner100"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @objc func receiveBanner100(notification: NSNotification) {
+        if let userinfo = notification.userInfo {
+            let alert = UIAlertController(title: userinfo["title"] as? String, message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func showNotification(_ sender: Any) {
-        let testData = [DefaultKey.NotificationId: 100,
+        let testData = [DefaultKey.NotificationId: Int32(100),
                     DefaultKey.Category: "Notification_Test_Category",
                     DefaultKey.Title: "testTitle",
                     DefaultKey.Content: "testContent",
-                    DefaultKey.TimeStamp: 999] as [String : Any]
+                    DefaultKey.TimeStamp: Double(999)] as [String : Any]
         MyAppNotificationHelper.shared.buildNotification(data: testData)
     }
 }

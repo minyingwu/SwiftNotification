@@ -24,6 +24,10 @@ pod 'SwiftNotification'
 
 minyingwu, minyingwu123@gmail.com
 
+
+## Demo
+![image](https://github.com/minyingwu/SwipeCardsTemplate/blob/master/DemoSwiftNotification.gif)
+
 ## License
 
 SwiftNotification is available under the MIT license. See the LICENSE file for more info.

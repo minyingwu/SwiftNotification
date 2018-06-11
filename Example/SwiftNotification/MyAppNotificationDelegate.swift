@@ -37,8 +37,12 @@ class MyAppNotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
                 print("Dismiss Action")
             case UNNotificationDefaultActionIdentifier:
                 print("Receive from notification id 100 banner")
+                let userInfo:[AnyHashable: String] = ["title": "Receive 100 banner"]
+                NotificationCenter.default.post(name: Notification.Name("ReceiveBanner100"), object: nil, userInfo: userInfo)
             case ActionId.ActionFirst.rawValue:
                 print("Receive from notification id 100 action first")
+                let userInfo:[AnyHashable: String] = ["title": "Receive 100 button one"]
+                NotificationCenter.default.post(name: Notification.Name("ReceiveBanner100"), object: nil, userInfo: userInfo)
             default:
                 print("Not match any action from notification id 100")
             }
