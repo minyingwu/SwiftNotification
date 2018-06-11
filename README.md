@@ -26,7 +26,7 @@ minyingwu, minyingwu123@gmail.com
 
 
 ## Demo
-![image](https://github.com/minyingwu/SwipeCardsTemplate/blob/master/DemoSwiftNotification.gif)
+![image](https://github.com/minyingwu/SwiftNotification/blob/master/DemoSwiftNotification.gif)
 
 ## License
 
