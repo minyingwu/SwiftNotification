@@ -25,7 +25,7 @@ class MyAppNotificationHelper2 {
             // Example: saveNotificationDB(notificationInfo)
             
             // Create local notification and show it
-            buildHelper.createNotification(with: .defaultSound)?.show()
+            buildHelper.createNotificationByCustom(with: .defaultSound)?.show()
         }else {
             print("Never initialize model of notificationInfo")
         }
