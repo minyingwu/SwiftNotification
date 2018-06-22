@@ -15,7 +15,7 @@ public protocol NotificationBuilderDelegate: class {
     
     func getNotificationInfo() -> NotificationInfo
     
-    func getNotificationIdentityDic() -> Dictionary<String, NotificationIdentity>
+    func getNotificationIdentityDic() -> Dictionary<String, NotificationIdentity>?
 }
 
 @available(iOS 10.0, *)

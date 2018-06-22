@@ -24,8 +24,10 @@ public class NotificationBuilderHelper {
             notificationId, forKey: DefaultKey.NotificationId)
     }
     
-    public func createNotification(with type: SoundType, alter actionIndex: Int? = nil) -> NotificationBuilderHelper? {
+    public func createNotification(with type: SoundType,
+                                   alter actionIndex: Int? = nil) -> NotificationBuilderHelper? {
         guard let mIdentity = self.delegate.notificationIdentityDic?[self.delegate.notificationInfo.getCategory()]?.get() else {
+            print("Never create NotificationIdentity in function getNotificationIdentityDic()")
             return nil
         }
         
@@ -40,12 +42,38 @@ public class NotificationBuilderHelper {
             trigger: mBuilder.getTimeTrigger(interval: 1))
         
         if let index = actionIndex {
-            mCategory = UNNotificationCategory(identifier: self.delegate.notificationInfo.getCategory(),
+            mCategory = UNNotificationCategory(identifier: mIdentity.categoryId,
                                                actions: getActions([mIdentity.categoryActions[index]]),
                                                intentIdentifiers: [], options: [])
         }else {
-            mCategory = UNNotificationCategory(identifier: self.delegate.notificationInfo.getCategory(),
+            mCategory = UNNotificationCategory(identifier: mIdentity.categoryId,
                                                actions: getActions(mIdentity.categoryActions),
+                                               intentIdentifiers: [], options: [])
+        }
+        return self
+    }
+    
+    public func createNotification(with type: SoundType,
+                                   add actions: [ActionContext],
+                                   alter actionIndex: Int? = nil) -> NotificationBuilderHelper? {
+        let mBuilder = NotificationBuilder(type: type)
+            .setTitle(title: self.delegate.notificationInfo.getTitle())
+            .setBody(body: self.delegate.notificationInfo.getContent())
+            .setUserInfo(userInfo: msgData)
+            .setCategoryIdentifer(categoryIdentifier: (self.delegate.notificationInfo.getCategory()))
+        mRequest = UNNotificationRequest(
+            identifier: String(self.delegate.notificationInfo.getNotificationId()),
+            content: mBuilder.getContent(),
+            trigger: mBuilder.getTimeTrigger(interval: 1))
+        
+        if let index = actionIndex {
+            mCategory = UNNotificationCategory(identifier:
+                self.delegate.notificationInfo.getCategory(),
+                                               actions: getActions([actions[index]]),
+                                               intentIdentifiers: [], options: [])
+        }else {
+            mCategory = UNNotificationCategory(identifier: self.delegate.notificationInfo.getCategory(),
+                                               actions: getActions(actions),
                                                intentIdentifiers: [], options: [])
         }
         return self

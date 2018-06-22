@@ -10,7 +10,7 @@ import Foundation
 import UserNotifications
 
 @available(iOS 10.0, *)
-typealias ActionContext = (actionTitle: String, actionOptions: UNNotificationActionOptions)
+public typealias ActionContext = (actionTitle: String, actionOptions: UNNotificationActionOptions)
 
 @available(iOS 10.0, *)
 public class NotificationIdentity {

@@ -11,6 +11,7 @@
 		2ED8582920C129C800E0B142 /* MyAppNotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED8582820C129C800E0B142 /* MyAppNotificationDelegate.swift */; };
 		2ED8582E20C12D4400E0B142 /* MyAppNotificationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED8582C20C12D4400E0B142 /* MyAppNotificationInfo.swift */; };
 		2ED8582F20C12D4400E0B142 /* MyAppNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED8582D20C12D4400E0B142 /* MyAppNotificationHelper.swift */; };
+		2EE6E0AD20DCCE59007F06A2 /* MyAppNotificationHelper2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6E0AC20DCCE59007F06A2 /* MyAppNotificationHelper2.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		2ED8582820C129C800E0B142 /* MyAppNotificationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppNotificationDelegate.swift; sourceTree = "<group>"; };
 		2ED8582C20C12D4400E0B142 /* MyAppNotificationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppNotificationInfo.swift; sourceTree = "<group>"; };
 		2ED8582D20C12D4400E0B142 /* MyAppNotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppNotificationHelper.swift; sourceTree = "<group>"; };
+		2EE6E0AC20DCCE59007F06A2 /* MyAppNotificationHelper2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppNotificationHelper2.swift; sourceTree = "<group>"; };
 		4772A1E62D2899C4515E6208 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		51EF6B731B85F3F0EEEA9D10 /* Pods-SwiftNotification_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftNotification_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftNotification_Example/Pods-SwiftNotification_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5F4AB929C38453E1FBE6921D /* Pods-SwiftNotification_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftNotification_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftNotification_Tests/Pods-SwiftNotification_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,11 +80,20 @@
 		2ED8582520C1294D00E0B142 /* TestNotification */ = {
 			isa = PBXGroup;
 			children = (
+				2EE6E0A820DCCD86007F06A2 /* CustomIdentityVersion */,
 				2ED8582C20C12D4400E0B142 /* MyAppNotificationInfo.swift */,
 				2ED8582D20C12D4400E0B142 /* MyAppNotificationHelper.swift */,
 				2ED8582820C129C800E0B142 /* MyAppNotificationDelegate.swift */,
 			);
 			name = TestNotification;
+			sourceTree = "<group>";
+		};
+		2EE6E0A820DCCD86007F06A2 /* CustomIdentityVersion */ = {
+			isa = PBXGroup;
+			children = (
+				2EE6E0AC20DCCE59007F06A2 /* MyAppNotificationHelper2.swift */,
+			);
+			name = CustomIdentityVersion;
 			sourceTree = "<group>";
 		};
 		520C0F0FB9BC0700F22E294C /* Frameworks */ = {
@@ -392,6 +403,7 @@
 				2ED8582E20C12D4400E0B142 /* MyAppNotificationInfo.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				2EE6E0AD20DCCE59007F06A2 /* MyAppNotificationHelper2.swift in Sources */,
 				2ED8582920C129C800E0B142 /* MyAppNotificationDelegate.swift in Sources */,
 				2ED8582F20C12D4400E0B142 /* MyAppNotificationHelper.swift in Sources */,
 			);

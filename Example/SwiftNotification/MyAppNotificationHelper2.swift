@@ -1,15 +1,15 @@
 //
-//  MyAppNotificationHelper.swift
-//  NotificationExample
+//  MyAppNotificationHelper2.swift
+//  SwiftNotification
 //
-//  Created by Victor on 2018/5/29.
-//  Copyright © 2018 Victor. All rights reserved.
+//  Created by Victor on 2018/6/22.
+//  Copyright © 2018 CocoaPods. All rights reserved.
 //
 
 import SwiftNotification
 
-class MyAppNotificationHelper {
-    public static let shared: MyAppNotificationHelper = MyAppNotificationHelper()
+class MyAppNotificationHelper2 {
+    public static let shared: MyAppNotificationHelper2 = MyAppNotificationHelper2()
     private init() {}
     
     fileprivate var info: MyAppNotificationInfo?
@@ -25,8 +25,7 @@ class MyAppNotificationHelper {
             // Example: saveNotificationDB(notificationInfo)
             
             // Create local notification and show it
-            let actionsContext: [ActionContext] = [("Action1Title", .foreground)]
-            buildHelper.createNotification(with: .defaultSound, add: actionsContext)?.show()
+            buildHelper.createNotification(with: .defaultSound)?.show()
         }else {
             print("Never initialize model of notificationInfo")
         }
@@ -45,12 +44,18 @@ class MyAppNotificationHelper {
     }
 }
 
-extension MyAppNotificationHelper: NotificationBuilderDelegate {
+extension MyAppNotificationHelper2: NotificationBuilderDelegate {
     func getNotificationInfo() -> NotificationInfo {
         return info!
     }
     
     func getNotificationIdentityDic() -> Dictionary<String, NotificationIdentity>? {
-        return nil
+        var identityDic = Dictionary<String, NotificationIdentity>()
+        identityDic.updateValue(NotificationIdentity()
+            .setRequestId("Notification_Test_Request")
+            .setCategoryId("Notification_Test_Category")
+            .setCategoryAction(("Action1Title", .foreground)), forKey: "Notification_Test_Category")
+        return identityDic
     }
 }
+
