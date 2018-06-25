@@ -6,7 +6,7 @@
 //  Copyright © 2018 Victor. All rights reserved.
 //
 
-public struct DefaultKey {
+open class DefaultKey {
     public static let NotificationId = "notificationid"
     public static let Category = "category"
     public static let Title = "title"
@@ -15,11 +15,24 @@ public struct DefaultKey {
     public static let IsRead = "isRead"
 }
 
-public enum ActionId: String {
-    case ActionFirst = "actionFirst"
-    case ActionSecond = "actionSecond"
-    case ActionThird = "actionThird"
-    case ActionFourth = "actionFourth"
+public enum ActionId {
+    case ActionFirst
+    case ActionSecond
+    case ActionThird
+    case ActionFourth
+    
+    public var identifier: String {
+        switch self {
+        case .ActionFirst:
+            return "actionFirst"
+        case .ActionSecond:
+            return "actionSecond"
+        case .ActionThird:
+            return "actionThird"
+        case .ActionFourth:
+            return "actionFourth"
+        }
+    }
 }
 
 public enum SoundType: Int {

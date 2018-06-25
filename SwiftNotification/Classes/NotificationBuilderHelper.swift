@@ -27,30 +27,30 @@ public class NotificationBuilderHelper {
     public func createNotification(with type: SoundType,
                                    add actions: [ActionContext]? = nil,
                                    alter actionIndex: Int? = nil) -> NotificationBuilderHelper? {
+        let notificationInfo = self.delegate.notificationInfo
         let mBuilder = NotificationBuilder(type: type)
-            .setTitle(title: self.delegate.notificationInfo.getTitle())
-            .setBody(body: self.delegate.notificationInfo.getContent())
+            .setTitle(title: notificationInfo.getTitle())
+            .setBody(body: notificationInfo.getContent())
             .setUserInfo(userInfo: msgData)
-            .setCategoryIdentifer(categoryIdentifier: (self.delegate.notificationInfo.getCategory()))
+            .setCategoryIdentifer(categoryIdentifier: (notificationInfo.getCategory()))
         mRequest = UNNotificationRequest(
-            identifier: String(self.delegate.notificationInfo.getNotificationId()),
+            identifier: String(notificationInfo.getNotificationId()),
             content: mBuilder.getContent(),
             trigger: mBuilder.getTimeTrigger(interval: 1))
         
         guard let actions = actions else {
-            mCategory = UNNotificationCategory(identifier: self.delegate.notificationInfo.getCategory(),
+            mCategory = UNNotificationCategory(identifier: notificationInfo.getCategory(),
                                                actions: [],
                                                intentIdentifiers: [], options: [])
             return self
         }
         
         if let index = actionIndex {
-            mCategory = UNNotificationCategory(identifier:
-                self.delegate.notificationInfo.getCategory(),
+            mCategory = UNNotificationCategory(identifier: notificationInfo.getCategory(),
                                                actions: getActions([actions[index]]),
                                                intentIdentifiers: [], options: [])
         }else {
-            mCategory = UNNotificationCategory(identifier: self.delegate.notificationInfo.getCategory(),
+            mCategory = UNNotificationCategory(identifier: notificationInfo.getCategory(),
                                                actions: getActions(actions),
                                                intentIdentifiers: [], options: [])
         }
@@ -59,16 +59,17 @@ public class NotificationBuilderHelper {
     
     public func createNotificationByCustom(with type: SoundType,
                                            alter actionIndex: Int? = nil) -> NotificationBuilderHelper? {
-        guard let mIdentity = self.delegate.notificationIdentityDic?[self.delegate.notificationInfo.getCategory()]?.get() else {
+        let notificationInfo = self.delegate.notificationInfo
+        guard let mIdentity = self.delegate.notificationIdentityDic?[notificationInfo.getCategory()]?.get() else {
             print("Never create NotificationIdentity in function getNotificationIdentityDic()")
             return nil
         }
         
         let mBuilder = NotificationBuilder(type: type)
-            .setTitle(title: self.delegate.notificationInfo.getTitle())
-            .setBody(body: self.delegate.notificationInfo.getContent())
+            .setTitle(title: notificationInfo.getTitle())
+            .setBody(body: notificationInfo.getContent())
             .setUserInfo(userInfo: msgData)
-            .setCategoryIdentifer(categoryIdentifier: (self.delegate.notificationInfo.getCategory()))
+            .setCategoryIdentifer(categoryIdentifier: mIdentity.categoryId)
         mRequest = UNNotificationRequest(
             identifier: mIdentity.requestId,
             content: mBuilder.getContent(),
@@ -113,25 +114,25 @@ public class NotificationBuilderHelper {
         }
         
         if count >= 1 {
-            mActions.append(UNNotificationAction(identifier: (ActionId.ActionFirst.rawValue),
+            mActions.append(UNNotificationAction(identifier: (ActionId.ActionFirst.identifier),
                                                  title: (actions[0].actionTitle),
                                                  options: [actions[0].actionOptions]))
         }
         
         if count >= 2 {
-            mActions.append(UNNotificationAction(identifier: (ActionId.ActionSecond.rawValue),
+            mActions.append(UNNotificationAction(identifier: (ActionId.ActionSecond.identifier),
                                                  title: (actions[1].actionTitle),
                                                  options: [actions[1].actionOptions]))
         }
         
         if count >= 3 {
-            mActions.append(UNNotificationAction(identifier: (ActionId.ActionThird.rawValue),
+            mActions.append(UNNotificationAction(identifier: (ActionId.ActionThird.identifier),
                                                  title: (actions[2].actionTitle),
                                                  options: [actions[2].actionOptions]))
         }
         
         if count >= 4 {
-            mActions.append(UNNotificationAction(identifier: (ActionId.ActionFourth.rawValue),
+            mActions.append(UNNotificationAction(identifier: (ActionId.ActionFourth.identifier),
                                                  title: (actions[3].actionTitle),
                                                  options: [actions[3].actionOptions]))
         }
