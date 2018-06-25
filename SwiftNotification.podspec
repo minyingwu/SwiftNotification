@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftNotification'
-  s.version          = '1.0.3'
+  s.version          = '1.0.5'
   s.summary          = 'A simple SDK to create different notifications after iOS 10.0'
 
 # This description is used to generate tags and improve search results.
