@@ -21,7 +21,7 @@ public class NotificationBuilderHelper {
     public init(withMessage data: [AnyHashable: Any], notificationId: Int32) {
         self.msgData = data
         msgData.updateValue(
-            notificationId, forKey: DefaultKey.NotificationId)
+            notificationId, forKey: DefaultKey.notificationId)
     }
     
     public func createNotification(with type: SoundType,
@@ -114,25 +114,25 @@ public class NotificationBuilderHelper {
         }
         
         if count >= 1 {
-            mActions.append(UNNotificationAction(identifier: (ActionId.ActionFirst.identifier),
+            mActions.append(UNNotificationAction(identifier: (ActionId.actionFirst.identifier),
                                                  title: (actions[0].actionTitle),
                                                  options: [actions[0].actionOptions]))
         }
         
         if count >= 2 {
-            mActions.append(UNNotificationAction(identifier: (ActionId.ActionSecond.identifier),
+            mActions.append(UNNotificationAction(identifier: (ActionId.actionSecond.identifier),
                                                  title: (actions[1].actionTitle),
                                                  options: [actions[1].actionOptions]))
         }
         
         if count >= 3 {
-            mActions.append(UNNotificationAction(identifier: (ActionId.ActionThird.identifier),
+            mActions.append(UNNotificationAction(identifier: (ActionId.actionThird.identifier),
                                                  title: (actions[2].actionTitle),
                                                  options: [actions[2].actionOptions]))
         }
         
         if count >= 4 {
-            mActions.append(UNNotificationAction(identifier: (ActionId.ActionFourth.identifier),
+            mActions.append(UNNotificationAction(identifier: (ActionId.actionFourth.identifier),
                                                  title: (actions[3].actionTitle),
                                                  options: [actions[3].actionOptions]))
         }

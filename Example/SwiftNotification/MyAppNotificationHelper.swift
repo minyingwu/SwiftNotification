@@ -34,11 +34,11 @@ class MyAppNotificationHelper {
     
     // Example for setting notification data model
     func setNotificationInfo(_ data: [AnyHashable: Any]) {
-        let _notificationId = data[DefaultKey.NotificationId] as? Int32
-        let _category = data[DefaultKey.Category] as? String
-        let _title = data[DefaultKey.Title] as? String
-        let _content = data[DefaultKey.Content] as? String
-        let _timeStamp = data[DefaultKey.TimeStamp] as? Double
+        let _notificationId = data[DefaultKey.notificationId] as? Int32
+        let _category = data[DefaultKey.category] as? String
+        let _title = data[DefaultKey.title] as? String
+        let _content = data[DefaultKey.content] as? String
+        let _timeStamp = data[DefaultKey.timestamp] as? Double
         
         info = MyAppNotificationInfo.init(notificationId: _notificationId, category: _category, title: _title, content: _content, timestamp: _timeStamp, isRead: false)
         info?.setcustomUid("My Uid")

@@ -7,29 +7,29 @@
 //
 
 open class DefaultKey {
-    public static let NotificationId = "notificationid"
-    public static let Category = "category"
-    public static let Title = "title"
-    public static let Content = "content"
-    public static let TimeStamp = "timestamp"
-    public static let IsRead = "isRead"
+    public static let notificationId = "notificationId"
+    public static let category = "category"
+    public static let title = "title"
+    public static let content = "content"
+    public static let timestamp = "timestamp"
+    public static let isRead = "isRead"
 }
 
 public enum ActionId {
-    case ActionFirst
-    case ActionSecond
-    case ActionThird
-    case ActionFourth
+    case actionFirst
+    case actionSecond
+    case actionThird
+    case actionFourth
     
     public var identifier: String {
         switch self {
-        case .ActionFirst:
+        case .actionFirst:
             return "actionFirst"
-        case .ActionSecond:
+        case .actionSecond:
             return "actionSecond"
-        case .ActionThird:
+        case .actionThird:
             return "actionThird"
-        case .ActionFourth:
+        case .actionFourth:
             return "actionFourth"
         }
     }

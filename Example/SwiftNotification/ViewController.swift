@@ -30,11 +30,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showNotification(_ sender: Any) {
-        let testData = [DefaultKey.NotificationId: Int32(100),
-                    DefaultKey.Category: "Notification_Test_Category",
-                    DefaultKey.Title: "testTitle",
-                    DefaultKey.Content: "testContent",
-                    DefaultKey.TimeStamp: Double(999)] as [String : Any]
+        let testData = [DefaultKey.notificationId: Int32(100),
+                    DefaultKey.category: "Notification_Test_Category",
+                    DefaultKey.title: "testTitle",
+                    DefaultKey.content: "testContent",
+                    DefaultKey.timestamp: Double(999)] as [String : Any]
         MyAppNotificationHelper.shared.buildNotification(data: testData)
     }
 }

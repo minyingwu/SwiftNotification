@@ -18,7 +18,7 @@ class MyAppNotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         let info = response.notification.request.content.userInfo
-        let notificationId: Int32 = info[DefaultKey.NotificationId] as! Int32
+        let notificationId: Int32 = info[DefaultKey.notificationId] as! Int32
         
         switch notificationId {
         case 0:
@@ -39,7 +39,7 @@ class MyAppNotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
                 print("Receive from notification id 100 banner")
                 let userInfo:[AnyHashable: String] = ["title": "Receive 100 banner"]
                 NotificationCenter.default.post(name: Notification.Name("ReceiveBanner100"), object: nil, userInfo: userInfo)
-            case ActionId.ActionFirst.identifier:
+            case ActionId.actionFirst.identifier:
                 print("Receive from notification id 100 action first")
                 let userInfo:[AnyHashable: String] = ["title": "Receive 100 button one"]
                 NotificationCenter.default.post(name: Notification.Name("ReceiveBanner100"), object: nil, userInfo: userInfo)
